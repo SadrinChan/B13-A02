@@ -8,6 +8,18 @@
 
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Tailwind Configuration for Animations -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    animation: {
+                        'pulse-slow': 'pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                    }
+                }
+            }
+        }
+    </script>
 
     <style>
         /* Custom gradient for Subscribe button */
@@ -48,7 +60,8 @@
             </ul>
 
             <!-- Subscribe Button (Hidden on Mobile) -->
-            <button class="hidden lg:block gradient-btn text-white px-6 py-3 rounded-full font-semibold transition">
+            <button
+                class="gradient-btn text-white px-6 py-3 rounded-full font-semibold hover:-translate-y-1 hover:shadow-xl transition-all duration-300">
                 Subscribe
             </button>
 
@@ -84,7 +97,7 @@
 
                     <!-- NEW Badge -->
                     <div
-                        class="absolute top-0 right-0 md:top-4 md:right-4 lg:top-8 lg:right-8 bg-[#00FF88] text-black px-4 py-1 rounded-full text-sm font-bold">
+                        class="absolute top-0 right-0 md:top-4 md:right-4 lg:top-8 lg:right-8 bg-[#00FF88] text-black px-4 py-1 rounded-full text-sm font-bold animate-pulse-slow">
                         NEW
                     </div>
                 </div>
@@ -102,11 +115,11 @@
                 <!-- Two Buttons -->
                 <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
                     <button
-                        class="gradient-btn text-white px-8 py-4 rounded-full font-semibold transition w-full sm:w-auto">
+                        class="gradient-btn text-white px-6 py-3 rounded-full font-semibold hover:-translate-y-1 hover:shadow-xl transition-all duration-300">
                         Listen On Spotify
                     </button>
                     <button
-                        class="bg-transparent border-2 border-[#00FF88] text-[#00FF88] px-8 py-4 rounded-full font-semibold hover:bg-[#00FF88] hover:text-black transition w-full sm:w-auto">
+                        class="bg-transparent border-2 border-[#00FF88] text-[#00FF88] px-8 py-4 rounded-full font-semibold hover:bg-[#00FF88] hover:text-black hover:-translate-y-1 hover:shadow-xl transition-all duration-300 w-full sm:w-auto">
                         Subscribe
                     </button>
                 </div>
@@ -198,7 +211,8 @@
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-5xl mx-auto">
 
                 <!-- Left Column - Card 1 (Premium Audio Quality) - LEFT ALIGNED -->
-                <div class="bg-[#2D1B4E] p-8 rounded-2xl hover:bg-[#3D2B5E] transition">
+                <div
+                    class="bg-[#2D1B4E] p-8 rounded-2xl hover:bg-[#3D2B5E] hover:-translate-y-2 hover:shadow-2xl transition-all duration-300">
                     <div class="mb-6">
                         <img src="assets/headphone.png" alt="Premium Audio Quality" class="w-16 h-16">
                     </div>
@@ -214,7 +228,8 @@
                 <!-- Right Column - Card 2 & 3 (Mobile Friendly + Global Community) -->
                 <div class="space-y-8">
                     <!-- Card 2: Mobile Friendly -->
-                    <div class="bg-[#2D1B4E] p-8 rounded-2xl hover:bg-[#3D2B5E] transition">
+                    <div
+                        class="bg-[#2D1B4E] p-8 rounded-2xl hover:bg-[#3D2B5E] hover:-translate-y-2 hover:shadow-2xl transition-all duration-300">
                         <div class="mb-6">
                             <img src="assets/device.png" alt="Mobile Friendly" class="w-16 h-16">
                         </div>
@@ -227,7 +242,8 @@
                     </div>
 
                     <!-- Card 3: Global Community -->
-                    <div class="bg-[#2D1B4E] p-8 rounded-2xl hover:bg-[#3D2B5E] transition">
+                    <div
+                        class="bg-[#2D1B4E] p-8 rounded-2xl hover:bg-[#3D2B5E] hover:-translate-y-2 hover:shadow-2xl transition-all duration-300">
                         <div class="mb-6">
                             <img src="assets/location.png" alt="Global Community" class="w-16 h-16">
                         </div>
@@ -241,7 +257,8 @@
                 </div>
 
                 <!-- Bottom Row - Card 4 & 5 (Exclusive Interviews + Rich Resources) -->
-                <div class="bg-[#2D1B4E] p-8 rounded-2xl hover:bg-[#3D2B5E] transition">
+                <div
+                    class="bg-[#2D1B4E] p-8 rounded-2xl hover:bg-[#3D2B5E] hover:-translate-y-2 hover:shadow-2xl transition-all duration-300">
                     <div class="mb-6">
                         <img src="assets/message.png" alt="Exclusive Interviews" class="w-16 h-16">
                     </div>
@@ -255,7 +272,8 @@
                     </p>
                 </div>
 
-                <div class="bg-[#2D1B4E] p-8 rounded-2xl hover:bg-[#3D2B5E] transition">
+                <div
+                    class="bg-[#2D1B4E] p-8 rounded-2xl hover:bg-[#3D2B5E] hover:-translate-y-2 hover:shadow-2xl transition-all duration-300">
                     <div class="mb-6">
                         <img src="assets/resource.png" alt="Rich Resources" class="w-16 h-16">
                     </div>
@@ -291,7 +309,7 @@
                     <!-- YouTube Video Embed -->
                     <div class="relative aspect-video">
                         <iframe class="w-full h-full" src="https://www.youtube.com/embed/J3Zg2Zoc7jM"
-                            title="The Future of AI in Everyday Life" frameborder="0"
+                            title="Hollow Knight" frameborder="0"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                             allowfullscreen>
                         </iframe>
@@ -300,15 +318,17 @@
                     <!-- Card Content -->
                     <div class="p-6">
                         <h3 class="text-xl md:text-2xl font-bold mb-3">
-                            The Future of AI in Everyday Life
+
+                            Hollow Knight - Tower of Love and Grubs
+
                         </h3>
                         <p class="text-gray-400 text-base leading-relaxed mb-4">
-                            Exploring how artificial intelligence is reshaping our daily routines and what to expect in
-                            the coming years.
+                            Welcome to a Hollow Knight playthrough. Hollow Knight is a 2d action adventure Metroidvania
+                            game. The game has an excellent dark art style with a smooth gameplay.
                         </p>
                         <div class="flex items-center gap-2 text-[#00FF88]">
                             <img src="assets/clock.png" alt="Duration" class="w-5 h-5">
-                            <span class="text-sm font-semibold">42 min</span>
+                            <span class="text-sm font-semibold">29:46 min</span>
                         </div>
                     </div>
                 </div>
@@ -318,7 +338,7 @@
                     <!-- YouTube Video Embed -->
                     <div class="relative aspect-video">
                         <iframe class="w-full h-full" src="https://www.youtube.com/embed/h0JOhbJPX1A"
-                            title="Building Better Habits for Remote Work" frameborder="0"
+                            title="Hollow Knight" frameborder="0"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                             allowfullscreen>
                         </iframe>
@@ -327,15 +347,14 @@
                     <!-- Card Content -->
                     <div class="p-6">
                         <h3 class="text-xl md:text-2xl font-bold mb-3">
-                            Building Better Habits for Remote Work
+
+                            Royal Waterways and Other Bosses
                         </h3>
                         <p class="text-gray-400 text-base leading-relaxed mb-4">
-                            Practical strategies for staying productive and maintaining work-life balance in a remote
-                            environment.
-                        </p>
+                            Welcome to a Hollow Knight playthrough. Hollow Knight is a 2d action adventure Metroidvania game. Your objective in the game is to find out what is happening in Hollownest. The game has an excellent dark art style with a smooth gameplay.
                         <div class="flex items-center gap-2 text-[#00FF88]">
                             <img src="assets/clock.png" alt="Duration" class="w-5 h-5">
-                            <span class="text-sm font-semibold">38 min</span>
+                            <span class="text-sm font-semibold">48:10 min</span>
                         </div>
                     </div>
                 </div>
@@ -345,7 +364,7 @@
                     <!-- YouTube Video Embed -->
                     <div class="relative aspect-video">
                         <iframe class="w-full h-full" src="https://www.youtube.com/embed/OfaRLvl7Sk4"
-                            title="Career Growth in Tech: A Roadmap" frameborder="0"
+                            title="Hollow Knight" frameborder="0"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                             allowfullscreen>
                         </iframe>
@@ -354,14 +373,14 @@
                     <!-- Card Content -->
                     <div class="p-6">
                         <h3 class="text-xl md:text-2xl font-bold mb-3">
-                            Career Growth in Tech: A Roadmap
+                            Shawwwww
                         </h3>
                         <p class="text-gray-400 text-base leading-relaxed mb-4">
-                            Expert advice on navigating your tech career from junior roles to leadership positions.
+                            Welcome to a Hollow Knight playthrough. Hollow Knight is a 2d action adventure Metroidvania game. Your objective in the game is to find out what is happening in Hollownest.
                         </p>
                         <div class="flex items-center gap-2 text-[#00FF88]">
                             <img src="assets/clock.png" alt="Duration" class="w-5 h-5">
-                            <span class="text-sm font-semibold">51 min</span>
+                            <span class="text-sm font-semibold">38:17 min</span>
                         </div>
                     </div>
                 </div>
@@ -370,6 +389,121 @@
 
         </div>
     </section>
+
+    <!-- Meet The Host Section -->
+    <section class="py-20 bg-[#1A0B2E]">
+        <div class="max-w-7xl mx-auto px-6">
+
+            <!-- Section Heading -->
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold">
+                    Meet The Host
+                </h2>
+            </div>
+
+            <!-- Host Content -->
+            <div
+                class="flex flex-col lg:flex-row items-center gap-12 max-w-5xl mx-auto bg-[#2D1B4E] rounded-2xl p-8 lg:p-12">
+
+                <!-- Host Image (Left) -->
+                <div class="flex-shrink-0">
+                    <img src="assets/host.png" alt="Alex Kumar"
+                        class="w-48 h-48 md:w-64 md:h-64 lg:w-80 lg:h-80 rounded-full object-cover">
+                </div>
+
+                <!-- Host Info (Right) -->
+                <div class="text-center lg:text-left">
+                    <!-- Host Name -->
+                    <h3 class="text-2xl md:text-3xl lg:text-4xl font-bold mb-4">
+                        Alex Kumar
+                    </h3>
+
+                    <!-- Host Biography -->
+                    <p class="text-gray-400 text-base md:text-lg leading-relaxed mb-6">
+                        Tech entrepreneur, podcaster, and lifelong learner. Alex has been in the tech industry for over
+                        10 years, working with startups and Fortune 500 companies. Through TechWave, Alex shares
+                        insights from every industry leaders and practical advice for anyone looking to thrive in tech.
+                    </p>
+
+                    <!-- Social Media Icons -->
+                    <div class="flex gap-4 justify-center lg:justify-start">
+                        <a href="#"
+                            class="w-12 h-12 bg-[#FF1A75] hover:bg-[#FF5E9D] rounded-full flex items-center justify-center hover:scale-110 hover:rotate-6 transition-all duration-300">
+                            <img src="assets/instagram.png" alt="Instagram" class="w-6 h-6">
+                        </a>
+                        <a href="#"
+                            class="w-12 h-12 bg-[#FF1A75] hover:bg-[#FF5E9D] rounded-full flex items-center justify-center hover:scale-110 hover:rotate-6 transition-all duration-300">
+                            <img src="assets/x.png" alt="X (Twitter)" class="w-6 h-6">
+                        </a>
+                        <a href="#"
+                            class="w-12 h-12 bg-[#FF1A75] hover:bg-[#FF5E9D] rounded-full flex items-center justify-center hover:scale-110 hover:rotate-6 transition-all duration-300">
+                            <img src="assets/linkedin.png" alt="LinkedIn" class="w-6 h-6">
+                        </a>
+                        <a href="#"
+                            class="w-12 h-12 bg-[#FF1A75] hover:bg-[#FF5E9D] rounded-full flex items-center justify-center hover:scale-110 hover:rotate-6 transition-all duration-300">
+                            <img src="assets/youtube.png" alt="YouTube" class="w-6 h-6">
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="relative py-16 bg-[#1A0B2E] overflow-hidden">
+        <!-- Footer Background Image -->
+        <div class="absolute inset-0 z-0">
+            <img src="assets/footer-bg.png" alt="Footer Background" class="w-full h-full object-cover opacity-30">
+        </div>
+
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+
+            <!-- Footer Content -->
+            <div class="text-center mb-8">
+                <!-- Logo -->
+                <div class="text-3xl md:text-4xl font-bold mb-6">
+                    Tech<span class="logo-gradient">Wave</span>
+                </div>
+
+                <!-- Platform Links -->
+                <div class="flex flex-wrap justify-center items-center gap-6 mb-8">
+                    <a href="#"
+                        class="flex items-center gap-2 text-gray-300 hover:text-white hover:translate-x-2 transition-all duration-300">
+                        <img src="assets/spotify.png" alt="Spotify" class="w-6 h-6">
+                        <span class="text-sm md:text-base">Spotify</span>
+                    </a>
+                    <a href="#"
+                        class="flex items-center gap-2 text-gray-300 hover:text-white hover:translate-x-2 transition-all duration-300">
+                        <img src="assets/apple-podcast.png" alt="Apple Podcasts" class="w-6 h-6">
+                        <span class="text-sm md:text-base">Apple Podcasts</span>
+                    </a>
+                    <a href="#"
+                        class="flex items-center gap-2 text-gray-300 hover:text-white hover:translate-x-2 transition-all duration-300">
+                        <img src="assets/youtube-podcast.png" alt="YouTube" class="w-6 h-6">
+                        <span class="text-sm md:text-base">YouTube</span>
+                    </a>
+                    <a href="#"
+                        class="flex items-center gap-2 text-gray-300 hover:text-white hover:translate-x-2 transition-all duration-300">
+                        <img src="assets/twitter.png" alt="Twitter" class="w-6 h-6">
+                        <span class="text-sm md:text-base">Twitter</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Divider -->
+            <hr class="border-gray-700 mb-6">
+
+            <!-- Copyright -->
+            <div class="text-center">
+                <p class="text-gray-400 text-sm md:text-base">
+                    © 2025 TechWave Podcast. All rights reserved.
+                </p>
+            </div>
+
+        </div>
+    </footer>
 
 </body>
 
